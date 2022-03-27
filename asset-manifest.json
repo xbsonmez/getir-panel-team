@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/getir-panel-team/static/css/main.9995c646.css",
+    "main.js": "/getir-panel-team/static/js/main.7a10e710.js",
+    "static/js/787.a1dbdae1.chunk.js": "/getir-panel-team/static/js/787.a1dbdae1.chunk.js",
+    "index.html": "/getir-panel-team/index.html",
+    "main.9995c646.css.map": "/getir-panel-team/static/css/main.9995c646.css.map",
+    "main.7a10e710.js.map": "/getir-panel-team/static/js/main.7a10e710.js.map",
+    "787.a1dbdae1.chunk.js.map": "/getir-panel-team/static/js/787.a1dbdae1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9995c646.css",
+    "static/js/main.7a10e710.js"
+  ]
+}
