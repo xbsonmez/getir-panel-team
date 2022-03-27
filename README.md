@@ -1,18 +1,32 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##  TO DO LIST APPLICATION ##
+
+
+I used https://jsonplaceholder.typicode.com/guide/ api,
+
+-There are two status todo and done.
+
+-Double click done and drag and drop update status.
+*added buton to change status task for mobile view because drag and drop didnt work on mobile.
+
+-responsive 
+-redux saga
+
 
 ## Available Scripts
 
 In the project directory, you can run:
 
 ### `npm start`
+-node version v14.16.1.
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+
 
 ### `npm test`
 
