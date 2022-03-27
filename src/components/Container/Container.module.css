@@ -1,0 +1,41 @@
+.titleContainer {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.titleToDo {
+    color:black;
+}
+
+.titleComplated {
+    color:white;
+}
+
+.container {
+    width: 400px;
+    min-width: 350px;
+    min-height: 400px;
+    height: 100%;
+    padding: 24px;
+    margin: 16px;
+}
+
+.todo {
+    background-color:#f4d81f;
+    color:white;
+}
+
+.completed {
+    background-color:#592db4;
+    color:white;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 200px !important;
+        min-width: 150px ;
+        margin: 3px;
+        padding: 3px;
+        margin-top: 30px;
+  }
+}
