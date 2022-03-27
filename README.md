@@ -1,1 +1,0 @@
-# getir-panel-team
