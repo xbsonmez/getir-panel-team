@@ -15,7 +15,7 @@ const Container = ({title, items, onDragOver, onDrop, status, className}) => {
     const titleCss = clsx({
         [s.titleContainer] : true,
         [s.titleToDo] : className,
-        [s.titleComplated] : !className,
+        [s.titlecompleted] : !className,
     });
 
     const toDoList = () => {

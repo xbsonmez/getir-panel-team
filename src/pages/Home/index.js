@@ -29,10 +29,10 @@ const Home = () => {
         setTask({taskList:tempList});
         
         let tempCard = card;
-        if(status === 'complated') {
-            tempCard.complated= true;
+        if(status === 'completed') {
+            tempCard.completed= true;
         } else {
-            tempCard.complated= false;
+            tempCard.completed= false;
         }
     
       dispatch((updateTask(tempCard)));
@@ -62,7 +62,7 @@ const Home = () => {
                     title='DONE'
                     onDragOver={onDragOver}
                     onDrop={onDrop}
-                    status='complated'
+                    status='completed'
                     className={false}
                 />
                 </div>

@@ -1,6 +1,7 @@
 export const onDropHelper = (ev, status, tasks, card) => {
        let tempList = tasks.filter(item => {
            if(item.id === card.id) {
+               debugger;
                item.completed=status;
                switch(status){
                    case 'completed':
