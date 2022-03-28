@@ -2,14 +2,18 @@ import React from 'react';
 import clsx from 'clsx';
 import s from './Card.module.css';
 import { Button } from 'antd';
-import { updateTask, deleteTask } from '../../redux/actions/tasks';
-import { useDispatch } from 'react-redux';
+import { updateTask, deleteTask, setTasks } from '../../redux/actions/tasks';
+import { useDispatch, useSelector } from 'react-redux';
 import { AiFillDelete } from "react-icons/ai";
+import {onDropHelper} from '../../utils';
 
 const Card = ({card,className}) => {
 
 const dispatch = useDispatch();
   
+
+const taskL = useSelector(state => state.allTask.data);
+
   const onDragStart = (e,card)=> {
     console.log('dragStart', card);
     var tempCard = JSON.stringify(card);
@@ -27,12 +31,18 @@ const dispatch = useDispatch();
 
   const updateStatus = () => {
 
+    let status = !card.completed ? 'completed' : 'todo';
+    
     let tempCard = card;
     if(card.completed) {
         tempCard.completed= false;
     } else {
         tempCard.completed= true;
     }
+
+    const tempList  = onDropHelper(status, taskL, card);
+
+    dispatch(setTasks(tempList));
     dispatch((updateTask(tempCard)));
   }
 

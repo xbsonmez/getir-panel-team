@@ -4,11 +4,19 @@ import {
     CREATE_TASKS_REQUEST,
     UPDATE_TASKS_REQUEST,
     DELETE_TASKS_REQUEST,
+    SET_TASKS_SUCCESS,
 } from '../constants';
 
 export function getTasks ()  {
   return {
       type:GET_TASKS_REQUEST,
+  }
+};
+
+export function setTasks (list)  {
+  return {
+      type:SET_TASKS_SUCCESS,
+      payload:list
   }
 };
 

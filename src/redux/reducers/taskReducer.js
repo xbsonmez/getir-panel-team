@@ -14,6 +14,8 @@ import {
     DELETE_TASKS_REQUEST, 
     DELETE_TASKS_SUCCESS,
     DELETE_TASKS_FAILURE,
+
+    SET_TASKS_SUCCESS,
   } from '../constants';
   
   const initialState = {
@@ -33,6 +35,10 @@ import {
         return { ...state, data: action.payload, isLoading: false, error: null };
       case GET_TASKS_FAILURE:
         return { ...state, isLoading: false, error: action.message };
+
+        //update end pount did not work, I added to SET_TASKS_SUCCESS to update List
+        case SET_TASKS_SUCCESS:
+        return { ...state, data: action.payload, error: null };
 
         case CREATE_TASKS_REQUEST:
           return { ...state, isLoading: true, error: null };

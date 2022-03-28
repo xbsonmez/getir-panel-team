@@ -3,14 +3,13 @@ import CustomInput from '../../components/Input';
 import Container from '../../components/Container';
 import s from './Home.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { getTasks, updateTask } from '../../redux/actions/tasks';
+import { getTasks, updateTask, setTasks } from '../../redux/actions/tasks';
 
 import {onDropHelper} from '../../utils';
 
 const Home = () => {
     const dispatch = useDispatch();
     const taskL = useSelector(state => state.allTask.data);
-    const [tasks, setTask] = useState([]);
 
     useEffect(() => {
         dispatch(getTasks());
@@ -21,20 +20,21 @@ const Home = () => {
         ev.preventDefault();
     };
 
+
+    
     const onDrop = (ev, status) => {
 
         let card = JSON.parse(ev.dataTransfer.getData("card"));
-        const tempList  = onDropHelper(ev, status, taskL, card);
+        const tempList  = onDropHelper(status, taskL, card);
 
-        setTask({taskList:tempList});
-        
         let tempCard = card;
         if(status === 'completed') {
             tempCard.completed= true;
         } else {
             tempCard.completed= false;
         }
-    
+
+      dispatch(setTasks(tempList));
       dispatch((updateTask(tempCard)));
     };
 
